@@ -17,6 +17,7 @@ def is_perfect(number):
     return False
 
 def properties(number):
+    number = abs(number)
     properties = []
     number_as_string = str(number)
     len_of_number = len(number_as_string)
@@ -38,6 +39,7 @@ def properties(number):
     return properties
 
 def digit_sum(number):
+    number = abs(number)
     sum = 0
 
     for i in str(number):
