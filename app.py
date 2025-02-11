@@ -16,6 +16,10 @@ app.add_middleware(CORSMiddleware,
 
 @app.get('/api/classify-number')
 async def hello(number):
+    if number != str(int(number)):
+        return JSONResponse(status_code=400,
+                            content={'error': True}
+                            )
     try:
         number = int(number)
     except:
